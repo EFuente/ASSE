@@ -1,2 +1,2 @@
 
-sitemap: http://cdn.attracta.com/sitemap/388014.xml.gz
+sitemap: http://www.sculpturese.com/sitemap.xml
