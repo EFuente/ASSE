@@ -1,1 +1,4 @@
-lftp -c "set ftp:ssl-allow false;set ftp:list-options -a;open $FTP_URL;lcd ./public_html;cd $REMOTE_PATH; mirror --reverse --use-cache --verbose --allow-chown --allow-suid --no-umask --parallel=2 --only-newer --ignore-time --exclude-glob .git"
+deployment:
+    production:
+        branch: production
+        lftp -c "set ftp:ssl-allow false;set ftp:list-options -a;open $FTP_URL;lcd ./public_html;cd $REMOTE_PATH; mirror --reverse --use-cache --verbose --allow-chown --allow-suid --no-umask --parallel=2 --only-newer --ignore-time --exclude-glob .git"
