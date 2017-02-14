@@ -1,6 +1,3 @@
-machine:
-    - sudo apt-get install lftp
-
 deployment:
     production:
         - branch: master
