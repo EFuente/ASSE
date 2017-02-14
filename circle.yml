@@ -3,5 +3,5 @@ machine:
 
 deployment:
     production:
-        branch: master
-        echo 'test'
+        - branch: master
+        - echo 'test'
