@@ -4,4 +4,5 @@ machine:
 deployment:
     production:
         branch: master
-        lftp -e 'put /test.efo -O /public_html; bye' -u $FTP_TEST_U $FTP_TEST_URL
+        echo $FTP_TEST_URL
+        #lftp -e 'put /test.efo -O /public_html; bye' -u $FTP_TEST_U $FTP_TEST_URL
