@@ -1,7 +1,7 @@
 ## Customize dependencies
 dependencies:
   pre:
-    - sudo apt-get install lftp
+    #- sudo apt-get install lftp
     
 deployment:
   staging:
@@ -9,5 +9,4 @@ deployment:
     commands:
       #- lftp -u $FTP_TEST_U -p 21 $FTP_TEST_URL
       - ls
-      - dir
-      #- lftp -e 'put test.efo /public_html; bye' -u $FTP_TEST_U $FTP_TEST_URL
+      - lftp -e 'rcd/public_html; put /test.efo; bye' -u $FTP_TEST_U $FTP_TEST_URL
