@@ -1,7 +1,7 @@
 ## Customize dependencies
 dependencies:
   pre:
-    - sudo install lftp
+    - sudo apt-get install lftp
     
 deployment:
   staging:
