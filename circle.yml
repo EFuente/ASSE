@@ -10,4 +10,4 @@ deployment:
       #- lftp -u $FTP_TEST_U -p 21 $FTP_TEST_URL
       - ls
       #- lftp -e ' ls; bye' -u $FTP_TEST_U $FTP_TEST_URL
-      - lftp -e 'set ftp:ssl-allow no; cd /public_html; ls; put /test.efo; bye' -u $FTP_TEST_U $FTP_TEST_URL
+      - lftp -e 'set ftp:ssl-allow no; cd /public_html; ls; put test.efo; bye' -u $FTP_TEST_U $FTP_TEST_URL
