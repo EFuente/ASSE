@@ -7,4 +7,4 @@ deployment:
   staging:
     branch: master
     commands:
-      - lftp -c "set ftp:ssl-allow false;set ftp:list-options -a;open -u $FTP_U $FTP_URL;cd $REMOTE_PATH; mirror --reverse --depth-first --use-cache --verbose --allow-chown --allow-suid --no-umask --parallel=2 --only-newer --ignore-time --exclude-glob .git"
+      - lftp -c "set ftp:ssl-allow false;set ftp:list-options -a;open -u $FTP_U $FTP_URL;cd $REMOTE_PATH; mirror --reverse --depth-first --use-cache --verbose --allow-chown --allow-suid --no-umask --parallel=2 --only-newer --ignore-time --exclude-glob=.git"
