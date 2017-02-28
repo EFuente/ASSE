@@ -110,6 +110,10 @@ a {
   margin-left: auto;
 }
 
+.new {
+  color:red;
+}
+
 .section_w_text {
   padding-bottom: 20px;
   background-color: #392cab;
