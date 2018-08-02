@@ -1,10 +1,11 @@
-## Customize dependencies
-dependencies:
-  pre:
-##    - sudo apt-get install lftp
-    
-deployment:
-  staging:
-    branch: master
-    commands:
-##      - lftp -c "set ftp:ssl-allow false;set ftp:list-options -a;open -u $FTP_U $FTP_URL;cd $REMOTE_PATH; mirror --reverse --depth-first --use-cache --verbose --allow-chown --allow-suid --no-umask --parallel=2 --only-newer --ignore-time --exclude-glob=.git"
+version: 2.0
+jobs:
+ build:
+   docker:
+     - image: alpine:3.7
+   steps:
+     - run:
+         name: The First Step
+         command: |
+           echo 'Hello World!'
+           echo 'This is the delivery pipeline'
