@@ -12,5 +12,5 @@ jobs:
      - run:
          name: Install lftp
          command: |
-                  lftp install -g 
+                  apt-get install lftp
            
