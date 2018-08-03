@@ -3,7 +3,7 @@ jobs:
  build:
    machine:
      enabled: true
-     image:   circleci/classic:Latest
+     image:   circleci/classic:201708-01
    steps:
      - run:
          name: Update npm
