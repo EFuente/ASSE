@@ -5,6 +5,9 @@ jobs:
      - image: alpine:3.7
    steps:
      - run:
+         name: Update npm
+         command: 'sudo npm install -g npm@latest'
+     - run:
          name: Install lftp
-         command: lftp install
+         command: install -g lftp
            
