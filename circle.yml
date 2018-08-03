@@ -1,8 +1,9 @@
 version: 2.0
 jobs:
  build:
-   docker:
-     - image: alpine:3.7
+   machine:
+     enabled: true
+     image:   circleci/classic:Latest
    steps:
      - run:
          name: Update npm
