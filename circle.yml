@@ -5,10 +5,6 @@ jobs:
      - image: alpine:3.7
    steps:
      - run:
-         name: The First Step
-         command: |
-           echo 'Starting the deployment'
-     - run:
          name: Install lftp
          command: 'sudo apt-get install lftp'
            
