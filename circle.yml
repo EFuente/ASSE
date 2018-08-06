@@ -12,6 +12,5 @@ jobs:
      - run:
          name: Install lftp
          command: |
-                  sudo apt-get update
                   sudo apt-get install lftp
            
