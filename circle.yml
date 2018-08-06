@@ -1,11 +1,13 @@
 version: 2.0
 jobs:
- build:
+ deploy-job:
    machine:
      enabled: true
      image:   circleci/classic:201708-01
+   working_directory: ~/
    steps:
-     - run:
+     - checkout
+	 - run:
          name: Update npm
          command: |
                   npm install -g npm@latest
@@ -14,10 +16,3 @@ jobs:
          command: |
                   sudo apt-get update
                   sudo apt-get install lftp
- deploy:
-  working_directory: ~/
-  steps:
-     - run:
-         name: Deploy site
-         command: |
-                  lftp -c "set ftp:ssl-allow false;set ftp:list-options -a;open -u $FTP_U $FTP_URL;cd $REMOTE_PATH; mirror --reverse --depth-first --use-cache --verbose --allow-chown --allow-suid --no-umask --parallel=2 --only-newer --ignore-time --exclude-glob=.git"
