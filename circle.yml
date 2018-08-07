@@ -1,18 +1,17 @@
 version: 2.0
 jobs:
-  deploy-job:
-    machine:
-      enabled: true
-      image:   circleci/classic:201708-01
-    working_directory: ~/
-    steps:
-	     - run:
-        name: Update npm
-        command: |
+ build:
+   machine:
+     enabled: true
+     image:   circleci/classic:201708-01
+   steps:
+     - run:
+         name: Update npm
+         command: |
                   npm install -g npm@latest
-      - run:
-        name: Install lftp
-        command: |
+     - run:
+         name: Install lftp
+         command: |
                   sudo apt-get update
                   sudo apt-get install lftp
-#      - checkout
+           
