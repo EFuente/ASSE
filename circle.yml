@@ -6,7 +6,6 @@ jobs:
       image:   circleci/classic:201708-01
     working_directory: ~/
     steps:
-      - checkout
 	     - run:
         name: Update npm
         command: |
@@ -16,3 +15,4 @@ jobs:
         command: |
                   sudo apt-get update
                   sudo apt-get install lftp
+      - checkout
