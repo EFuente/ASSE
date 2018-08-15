@@ -1,21 +1,10 @@
-version: 2.0
-jobs:
- build:
-   machine:
-     enabled: true
-     image:   circleci/classic:201708-01
-   steps:
-     - run:
-         name: Update npm
-         command: |
-                  npm install -g npm@latest
-     - run:
-         name: Install lftp
-         command: |
-                  sudo apt-get update
-                  sudo apt-get install lftp
-     - checkout
-     - run:
-         name: Deploy site
-         command: |
-                  lftp -c "set ftp:ssl-allow false;set ftp:list-options -a;open -u $FTP_U $FTP_URL;cd $REMOTE_PATH; mirror --reverse --depth-first --use-cache --verbose --allow-chown --allow-suid --no-umask --parallel=2 --only-newer --ignore-time --exclude-glob=.git"
+## Customize dependencies
+dependencies:
+  pre:
+##    - sudo apt-get install lftp
+   
+deployment:
+  staging:
+    branch: master
+    commands:
+##      - lftp -c "set ftp:ssl-allow false;set ftp:list-options -a;open -u $FTP_U $FTP_URL;cd $REMOTE_PATH; mirror --reverse --depth-first --use-cache --verbose --allow-chown --allow-suid --no-umask --parallel=2 --only-newer --ignore-time --exclude-glob=.git"
