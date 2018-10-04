@@ -2739,7 +2739,7 @@
     var google = null;
     var $maps;
     var namespace = '.w-widget-map';
-    var apiKey = 'AIzaSyBks0W0NawnPju70JQS5XXPOTTrguDQjWE';
+    var apiKey = 'AIzaSyDpgElZ1JpBsyK3zUkEFDvE93THJYs_Gfk';
 
     // -----------------------------------
     // Module methods
