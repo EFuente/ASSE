@@ -2741,7 +2741,7 @@
     var namespace = '.w-widget-map';
     var apiKey = 'AIzaSyDpgElZ1JpBsyK3zUkEFDvE93THJYs_Gfk';
 
-    // -----------------------------------
+    // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
     // Module methods
 
     api.ready = function() {
