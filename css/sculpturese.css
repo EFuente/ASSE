@@ -408,6 +408,10 @@ a {
   padding-top: 10px;
 }
 
+.div_boff {
+  padding-top: 10px;
+}
+
 @media (max-width: 991px) {
   .navbar {
     min-height: auto;
